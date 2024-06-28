@@ -1,13 +1,13 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
+
 public class login {
     private JTextField nombreu;
     private JButton OK;
     private JLabel nombre;
     private JLabel contraseña;
-    private JPasswordField passwordField1;
+    private JPasswordField contrasenia;
     public JPanel login;
     private JTextField contrase;
     public login(JFrame frame1) {
@@ -15,12 +15,14 @@ public class login {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nombre = "Mireya Garcia";
-                String contrasenia ="Nena";
-                if (nombreu.equals(nombre)){
+                String contrasenia2 ="Nena";
+                String nombreUsuario = nombreu.getText();
+                String contraseniaUsuario = new String(contrasenia.getPassword());
+                if (!nombre.equals(nombreUsuario)){
                     System.out.println("El nombre es incorrecto");
-                } else if (contrase.equals(contrasenia)){
+                } else if (!contrasenia2.equals(contraseniaUsuario)){
                     System.out.println("La contraseña esta incorrecta");
-                } else if (nombreu.equals(nombre) &&  contrase.equals(contrasenia)){
+                } else if (nombre.equals(nombreUsuario) &&  contrasenia2.equals(contraseniaUsuario)){
                     JFrame frame = new JFrame("Nueva ventana");
                     frame.setContentPane(new  Bienvenida().VentanaNueva);
                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

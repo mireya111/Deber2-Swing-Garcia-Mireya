@@ -10,6 +10,5 @@ public class Main {
         frame.setSize(500, 500);
         frame.pack();
         frame.setVisible(true);
-
     }
 }
